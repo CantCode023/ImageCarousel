@@ -6,10 +6,10 @@ var img = container.getElementsByTagName('img')[0];
 var button = container.getElementsByTagName('button')[0];
 // get second button in container
 var button2 = container.getElementsByTagName('button')[1];
+const index = img.src.split("/").indexOf("1.png")
 
 // addEventListener to button
 button.addEventListener('click', function() {
-    const index = img.src.split("/").indexOf("1.png")
     let currentSrc = parseInt(img.src.split("/")[index].replace(".png", ""))
     if (currentSrc == 1) {
         currentSrc = 7
