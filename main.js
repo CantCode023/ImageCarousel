@@ -9,7 +9,8 @@ var button2 = container.getElementsByTagName('button')[1];
 
 // addEventListener to button
 button.addEventListener('click', function() {
-    let currentSrc = parseInt(img.src.split("/"))
+    const index = img.src.split("/").indexOf("1.png")
+    let currentSrc = parseInt(img.src.split("/")[index].replace(".png", ""))
     if (currentSrc == 1) {
         currentSrc = 7
         img.src = `images/${currentSrc-1}.png`
