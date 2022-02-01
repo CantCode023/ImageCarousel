@@ -10,7 +10,9 @@ const index = img.src.split("/").indexOf("1.png")
 
 // addEventListener to button
 button.addEventListener('click', function() {
+    console.log(index)
     let currentSrc = parseInt(img.src.split("/")[index].replace(".png", ""))
+    console.log(currentSrc)
     if (currentSrc == 1) {
         currentSrc = 7
         img.src = `images/${currentSrc-1}.png`
@@ -21,7 +23,7 @@ button.addEventListener('click', function() {
 
 // addEventListener to button2
 button2.addEventListener('click', function() {
-    let currentSrc = parseInt(img.src.split("/")[4].replace(".png", ""))
+    let currentSrc = parseInt(img.src.split("/")[index].replace(".png", ""))
     if (currentSrc == 6) {
         currentSrc = 0
         img.src = `images/${currentSrc+1}.png`
